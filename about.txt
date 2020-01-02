@@ -1,0 +1,5 @@
+Theme name:    Tailwind
+Description:   Clean theme using Tailwind CSS
+Author name:   Nathan Green
+Author site:   http://github.com/nath-green
+License:       http://github.com/nath-green
