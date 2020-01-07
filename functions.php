@@ -65,17 +65,22 @@ function relative_time($date)
     }
 }
 
-function twitter_account()
-{
-    return site_meta('twitter', 'idiot');
-}
-
-function twitter_url()
-{
-    return 'https://twitter.com/' . twitter_account();
-}
-
 function total_articles()
 {
     return total_posts();
+}
+
+function getCategoryInfo() {
+    $url = preg_split("/\//", current_url());
+
+    if ($url[0] === 'category') {
+        $category = Category::slug($url[1]);
+        if (!empty($category)) {
+            return $category;
+        }
+    }
+}
+
+function googleAnalyticsUrl() {
+    echo 'https://www.googletagmanager.com/gtag/js?id=' . site_meta('google_analytics_tracking_id');
 }

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.h-100vh {
+  height: 100vh !important;
+}
+
+.article {
+  background-color: white;
+}
+
+.mh-100vh {
+  min-height: 100vh;
+}
+
+.article-html p {
+  margin-bottom: 2rem;
+}

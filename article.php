@@ -1,57 +1,52 @@
 <?php theme_include('header'); ?>
-		<section class="content wrap" id="article-<?php echo article_id(); ?>">
-			<h1><?php echo article_title(); ?></h1>
 
-			<article>
-				<?php echo article_html(); ?>
-			</article>
-		</section>
+<?php if (article_custom_field('hero')) { ?>
+  <img src="<?php echo article_custom_field('hero'); ?>" alt="" class="h-64 mb-10 w-full object-cover">
+<?php } ?>
 
-		<?php if (comments_open()): ?>
-		<section class="comments">
-			<?php if (has_comments()): ?>
-			<ul class="commentlist">
-				<?php $i = 0; while (comments()): $i++; ?>
-				<li class="comment" id="comment-<?php echo comment_id(); ?>">
-					<div class="wrap">
-						<h2><?php echo comment_name(); ?></h2>
-						<time><?php echo relative_time(comment_time()); ?></time>
+<section id="article-<?php echo article_id(); ?>" class="container flex-1">
+  <h1 class="text-2xl mb-3 font-semibold font-title leading-tight">
+    <?php echo article_title(); ?>
+  </h1>
 
-						<div class="content">
-							<?php echo comment_text(); ?>
-						</div>
+  <div class="flex">
+    <?php if (user_custom_field('avatar')) { ?>
+      <span class="w-10 h-10 rounded-full mr-2">
+        <img src="<?php echo user_custom_field('avatar', '', article_author_id('')); ?>" alt=""
+          class="w-full h-full object-cover rounded-full">
+      </span>
+    <?php } ?>
 
-						<span class="counter"><?php echo $i; ?></span>
-					</div>
-				</li>
-				<?php endwhile; ?>
-			</ul>
-			<?php endif; ?>
+    <div>
+      <p class="text-gray-700 text-sm">
+        <?php echo article_author('real_name'); ?> in <a href="<?php echo article_category_url(); ?>"
+          class="text-purple-600 underline"><?php echo article_category(); ?></a>
+      </p>
 
-			<form id="comment" class="commentform wrap" method="post" action="<?php echo comment_form_url(); ?>#comment">
-				<?php echo comment_form_notifications(); ?>
+      <p class="text-gray-700 text-xs">
+        Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>
+      </p>
+    </div>
+  </div>
 
-				<p class="name">
-					<label for="name">Your name:</label>
-					<?php echo comment_form_input_name('placeholder="Your name"'); ?>
-				</p>
+  <hr class=" my-6 opacity-50" />
 
-				<p class="email">
-					<label for="email">Your email address:</label>
-					<?php echo comment_form_input_email('placeholder="Your email (won’t be published)"'); ?>
-				</p>
+  <article class="font-serif text-lg article-html">
+    <?php echo article_html(); ?>
+  </article>
 
-				<p class="textarea">
-					<label for="text">Your comment:</label>
-					<?php echo comment_form_input_text('placeholder="Your comment"'); ?>
-				</p>
+  <?php if (article_adjacent_url('prev') || (article_adjacent_url('next'))) { ?>
+  <div class="flex justify-between items-center mt-16">
+    <?php if (article_adjacent_url('prev')) { ?>
+    <a href="<?php article_adjacent_url('prev'); ?>" class='flex items-center text-purple-600 underline'>&larr;
+      Previous</a>
+    <?php } ?>
+    <?php if (article_adjacent_url('next')) { ?>
+    <a href="<?php article_adjacent_url('next'); ?>" class='flex items-center text-purple-600 underline'>Next &rarr;</a>
+    <?php } ?>
+  </div>
+  <?php } ?>
 
-				<p class="submit">
-					<?php echo comment_form_button(); ?>
-				</p>
-			</form>
-
-		</section>
-		<?php endif; ?>
+</section>
 
 <?php theme_include('footer'); ?>
