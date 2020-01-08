@@ -22,16 +22,16 @@
     <![endif]-->
 
   <?php if (site_meta('google_analytics_tracking_id')) { ?>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="<?php googleAnalyticsUrl();?>"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="<?php googleAnalyticsUrl();?>"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', "<?php echo site_meta('google_analytics_tracking_id');?>");
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', "<?php echo site_meta('google_analytics_tracking_id');?>");
   </script>
   <?php } ?>
 
@@ -41,13 +41,19 @@
   <meta name="viewport" content="width=device-width">
 
   <meta property="og:title" content="<?php echo page_title(); ?>">
+  <?php if(is_article()): ?>
+  <meta property="og:type" content="article">
+  <?php else: ?>
   <meta property="og:type" content="website">
+  <?php endif; ?>
   <meta property="og:url" content="<?php echo (current_url()); ?>">
   <?php if(is_article() && !article_custom_field('og:image')): ?>
-    <meta property="og:image" content="<?php echo article_custom_field('og_image'); ?>">
+  <meta property="og:image" content="<?php echo article_custom_field('og_image'); ?>">
   <?php else: ?>
-    <meta property="og:image" content="<?php echo theme_url('img/og_image.jpg'); ?>">
+  <meta property="og:image" content="<?php echo theme_url('img/og_image.jpg'); ?>">
   <?php endif; ?>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
   <meta property="og:site_name" content="<?php echo site_name(); ?>">
   <meta property="og:description" content="<?php echo page_description(); ?>">
 </head>
