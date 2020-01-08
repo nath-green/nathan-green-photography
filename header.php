@@ -46,14 +46,14 @@
   <?php else: ?>
   <meta property="og:type" content="website">
   <?php endif; ?>
-  <meta property="og:url" content="<?php echo (current_url()); ?>">
+  <meta property="og:url" content="<?php echo full_url(); ?>">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
   <?php if(is_article() && !article_custom_field('og:image')): ?>
   <meta property="og:image" content="<?php echo article_custom_field('og_image'); ?>">
   <?php else: ?>
   <meta property="og:image" content="<?php echo theme_url('img/og_image.jpg'); ?>">
   <?php endif; ?>
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="800" />
   <meta property="og:site_name" content="<?php echo site_name(); ?>">
   <meta property="og:description" content="<?php echo page_description(); ?>">
 </head>
