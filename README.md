@@ -41,7 +41,7 @@ function user_custom_field($key, $default = '', $id = null) {
 
 ```
 function base_domain_url($append = '') {
-  return (isset($_SERVER['HTTPS']) ? 'http' : 'https' ). "://" . $_SERVER['SERVER_NAME'] . $append;
+  return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['SERVER_NAME'] . $append;
 }
 ```
 

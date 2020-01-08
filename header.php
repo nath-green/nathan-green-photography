@@ -46,7 +46,7 @@
   <?php else: ?>
   <meta property="og:type" content="website">
   <?php endif; ?>
-  <meta property="og:url" content="<?php echo full_url(); ?>">
+  <meta property="og:url" content="<?php echo complete_url(); ?>">
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="800" />
   <?php if(is_article() && !article_custom_field('og:image')): ?>

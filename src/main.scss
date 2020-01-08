@@ -17,3 +17,9 @@
 .article-html p {
   margin-bottom: 2rem;
 }
+
+@media (min-width: 1024px) {
+  .lg\:h-30rem {
+    height: 30rem;
+  }
+}
