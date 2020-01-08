@@ -21,7 +21,7 @@ Basic theme for Anchor CMS using Tailwind
 
 ### Prep site for theme installation
 
-- Create a new function in `/anchor/functions/users.php/`
+- Create a new function in `/anchor/functions/users.php`
 
 ```
 function user_custom_field($key, $default = '', $id = null) {
@@ -34,6 +34,14 @@ function user_custom_field($key, $default = '', $id = null) {
   }
 
   return $default;
+}
+```
+
+- Create a new function in `/anchor/functions/helpers.php`
+
+```
+function base_domain_url($append = '') {
+  return (isset($_SERVER['HTTPS']) ? 'http' : 'https' ). "://" . $_SERVER['SERVER_NAME'] . $append;
 }
 ```
 

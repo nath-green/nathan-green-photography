@@ -50,7 +50,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="800" />
   <?php if(is_article() && !article_custom_field('og:image')): ?>
-  <meta property="og:image" content="<?php echo article_custom_field('og_image'); ?>">
+  <meta property="og:image" content="<?php echo base_domain_url(article_custom_field('og_image')); ?>">
   <?php else: ?>
   <meta property="og:image" content="<?php echo theme_url('img/og_image.jpg'); ?>">
   <?php endif; ?>
