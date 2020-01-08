@@ -1,6 +1,7 @@
 {
   "name": "anchor-tailwind",
   "version": "1.0.0",
+  "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.7.3",
     "node-sass": "^4.13.0",
