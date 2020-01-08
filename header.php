@@ -52,7 +52,7 @@
   <?php if(is_article() && !article_custom_field('og:image')): ?>
   <meta property="og:image" content="<?php echo base_domain_url(article_custom_field('og_image')); ?>">
   <?php else: ?>
-  <meta property="og:image" content="<?php echo theme_url('img/og_image.jpg'); ?>">
+  <meta property="og:image" content="<?php echo base_domain_url() . theme_url('img/og_image.jpg'); ?>">
   <?php endif; ?>
   <meta property="og:site_name" content="<?php echo site_name(); ?>">
   <meta property="og:description" content="<?php echo page_description(); ?>">
