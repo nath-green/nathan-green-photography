@@ -7,7 +7,7 @@
     itemprop="image" />
   <?php } ?>
 
-  <div class="container mt-8">
+  <div class="lg-container my-8">
     <header>
       <ul id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList" class="flex flex-wrap mb-5 text-xs">
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item"
@@ -26,13 +26,13 @@
         </li>
       </ul>
 
-      <h1 itemprop="name headline" class="text-2xl mb-3 font-semibold font-title leading-tight">
+      <h1 itemprop="name headline" class="text-xl leading-tight mb-3 font-semibold font-title">
         <?php echo article_title(); ?>
       </h1>
 
     </header>
 
-    <section class="flex">
+    <section class="flex items-center mb-5">
       <?php if (user_custom_field('avatar', '', article_author_id())) { ?>
       <span class="w-10 h-10 rounded-full mr-2">
         <img src="<?php echo user_custom_field('avatar', '', article_author_id()); ?>" alt=""
@@ -57,7 +57,7 @@
 
     <hr class=" my-6 opacity-50" />
 
-    <section itemprop="articleBody" class="font-serif text-lg article-html">
+    <section itemprop="articleBody" class="font-serif article-html text-md leading-tight text-gray-700">
       <?php echo article_html(); ?>
     </section>
 

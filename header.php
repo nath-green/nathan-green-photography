@@ -58,10 +58,10 @@
   <meta property="og:description" content="<?php echo page_description(); ?>">
 </head>
 
-<body class="<?php echo body_class(); ?> bg-gray-100 font-sans">
+<body class="<?php echo body_class(); ?> font-sans">
   <div class="flex flex-col mh-100vh">
     <header class="py-5 bg-white shadow">
-      <div class="container flex justify-between items-center">
+      <div class="px-6 flex justify-between items-center">
         <a href="<?php echo base_url(); ?>" aria-label="Blog home"><img src="<?php echo theme_url('img/logo.svg'); ?>"
             class="" width="170px" alt=""></a>
         <?php if (site_meta('website_url')) { ?>
