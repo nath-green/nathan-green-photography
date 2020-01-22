@@ -46,7 +46,7 @@
     <header class="py-5">
       <div class="px-6 flex justify-between items-center">
         <a href="<?php echo base_url(); ?>" aria-label="Home"><img src="<?php echo theme_url('img/logo.svg'); ?>"
-            class="" width="170px" alt=""></a>
+            class="" width="170px" alt="Nathan Green Photography logo"></a>
             <a class="c-btn" href="<?php echo base_url(); ?>posts" title="Read photography articles written by Nathan Green">Read blog</a>
       </div>
     </header>

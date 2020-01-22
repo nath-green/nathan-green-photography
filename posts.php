@@ -39,7 +39,7 @@
 
               <div class="flex items-center mb-3">
                 <span class="w-10 h-10 rounded-full mr-2">
-                  <img src="<?php echo user_custom_field('avatar', '', article_author_id()); ?>" alt=""
+                  <img src="<?php echo user_custom_field('avatar', '', article_author_id()); ?>" alt="<?php echo article_author('real_name'); ?>"
                     class="w-full h-full object-cover rounded-full">
                 </span>
 
