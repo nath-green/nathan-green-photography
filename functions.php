@@ -85,7 +85,7 @@ function googleAnalyticsUrl() {
     echo 'https://www.googletagmanager.com/gtag/js?id=' . site_meta('google_analytics_tracking_id');
 }
 
-function rwar_latest_posts($limit) {
+function rwar_latest_posts($limit, $slug) {
     // only run on the first call
     if( ! Registry::has('rwar_latest_posts')) {
         // capture original article if one is set
@@ -95,7 +95,13 @@ function rwar_latest_posts($limit) {
     }
 
     if( ! $posts = Registry::get('rwar_latest_posts')) {
-        $posts = Post::where('status', '=', 'published')->sort('created', 'desc')->take($limit)->get();
+        if ($slug) {
+            $category = Category::slug($slug);
+            $posts = Post::where('status', '=', 'published')->where('category', '=', $category->id)->sort('created', 'desc')->take($limit)->get();
+        } else {
+            $posts = Post::where('status', '=', 'published')->sort('created', 'desc')->take($limit)->get();
+
+        }
 
         Registry::set('rwar_latest_posts', $posts = new Items($posts));
     }

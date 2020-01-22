@@ -159,7 +159,7 @@
 <div class="bg-gray-200 border pt-12 pb-6">
   <div class="lg-container">
     <div class="md:flex md:flex-wrap md:-mx-3" itemscope itemtype="http://schema.org/ItemList">
-      <?php $i=1; while(rwar_latest_posts(4)): ?>
+      <?php $i=1; while(rwar_latest_posts(4, false)): ?>
 
       <div class="md:w-1/2 md:px-3 mb-6" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <meta itemprop="url" content="<?php echo article_url(); ?>" />
