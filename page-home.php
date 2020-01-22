@@ -27,8 +27,8 @@
       <div class="p-6">
         <p class="mb-4">Being a a new Dad has really helped me on this journey of
           capturing the most precious things in our lives. Walking back through homes and seeing my work on your walls
-          is the biggest compliment and something that I treasure.</p><a class="c-btn block mb-8" href="<?php echo base_url(); ?>about"
-          title="Why Nathan got into photography">Read more about Nathan</a>
+          is the biggest compliment and something that I treasure.</p><a class="c-btn block mb-8"
+          href="<?php echo base_url(); ?>about" title="Why Nathan got into photography">Read more about Nathan</a>
         <div class="flex mb-3"><img src="<?php echo theme_url('img/star.svg'); ?>" alt="Star icon" width="20px"
             aria-hidden /><img src="<?php echo theme_url('img/star.svg'); ?>" alt="Star icon" width="20px"
             aria-hidden /><img src="<?php echo theme_url('img/star.svg'); ?>" alt="Star icon" width="20px"
@@ -43,8 +43,8 @@
         <a class="c-btn c-btn--primary block flex items-center justify-center"
           href="https://www.facebook.com/pg/nathangreenphotography/reviews/"
           title="Read Facebook reviews on Facebook.com">Read all reviews
-          <img src="<?php echo theme_url('img/open.svg'); ?>" alt="Open icon" width="20px"
-            aria-hidden class="ml-2" /></a>
+          <img src="<?php echo theme_url('img/open.svg'); ?>" alt="Open icon" width="20px" aria-hidden
+            class="ml-2" /></a>
       </div>
     </div>
   </div>
@@ -153,56 +153,59 @@
 
 <div class="sm-container mb-6">
   <h2>Latest blog posts</h2>
-  <p>Read the most recent photography articles written by Nathan Green. See the full list of articles on the <a href="<?php echo base_url(); ?>posts" class="text-purple-600 underline">blog homepage</a>.</p>
+  <p>Read the most recent photography articles written by Nathan Green. See the full list of articles on the <a
+      href="<?php echo base_url(); ?>posts" class="text-purple-600 underline">blog homepage</a>.</p>
 </div>
 
 <div class="bg-gray-200 border pt-12 pb-6">
   <div class="lg-container">
     <div class="md:flex md:flex-wrap md:-mx-3" itemscope itemtype="http://schema.org/ItemList">
-      <?php $i=1; while(rwar_latest_posts(4, false)): ?>
 
-      <div class="md:w-1/2 md:px-3 mb-6" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <meta itemprop="url" content="<?php echo article_url(); ?>" />
-        <meta itemprop="position" content="<?php echo $i; ?>" />
-        <article class="c-card" itemtype="http://schema.org/Article">
-          <img class="h-56 w-full object-cover" src="<?php echo article_custom_field('hero'); ?>"
-            alt="<?php echo article_custom_field('image_alt'); ?>" itemprop="image" />
-          <div class="px-6 py-6 flex flex-col flex-1">
-            <header>
-              <h2 class="mb-3" itemprop="name headline"><?php echo article_title(); ?></h2>
-            </header>
-            <div class="flex items-center mb-3">
-              <span class="w-10 h-10 rounded-full mr-2">
-                <img src="<?php echo user_custom_field('avatar', '', article_author_id()); ?>" alt="Nathan Green"
-                  class="w-full h-full object-cover rounded-full">
-              </span>
+      <?php
+        $i = 1;
+        $posts = rwar_latest_posts(4, false);
+        foreach($posts as $post): ?>
+          <div class="md:w-1/2 md:px-3 mb-6" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <meta itemprop="url" content="<?php echo article_url(); ?>" />
+            <meta itemprop="position" content="<?php echo $i; ?>" />
+            <article class="c-card" itemtype="http://schema.org/Article">
+              <img class="h-56 w-full object-cover" src="<?php echo article_custom_field('hero'); ?>"
+                alt="<?php echo article_custom_field('image_alt'); ?>" itemprop="image" />
+              <div class="px-6 py-6 flex flex-col flex-1">
+                <header>
+                  <h2 class="mb-3" itemprop="name headline"><?php echo article_title(); ?></h2>
+                </header>
+                <div class="flex items-center mb-3">
+                  <span class="w-10 h-10 rounded-full mr-2">
+                    <img src="<?php echo user_custom_field('avatar', '', $post->author); ?>"
+                      alt="<?php user_real_name($post->author); ?>" class="w-full h-full object-cover rounded-full">
+                  </span>
 
-              <div>
-                <p class="font-sans text-sm">
-                  <span itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
-                    <span itemprop="name"><?php echo article_author('real_name'); ?></span></span> in <a
-                    href="<?php echo article_category_url(); ?>"
-                    class="text-purple-600 underline"><?php echo article_category(); ?></a>
-                </p>
+                  <div>
+                    <p class="font-sans text-sm">
+                      <span itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+                        <span itemprop="name"><?php user_real_name($post->author); ?></span></span> in <a
+                        href="<?php echo article_category_url(); ?>"
+                        class="text-purple-600 underline"><?php echo article_category(); ?></a>
+                    </p>
 
-                <p class="font-sans text-xs">
-                  Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"
-                    itemprop="datePublished dateModified"
-                    content="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>
-                </p>
+                    <p class="font-sans text-xs">
+                      Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"
+                        itemprop="datePublished dateModified"
+                        content="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>
+                    </p>
+                  </div>
+                </div>
+                <p class="mb-4 flex-1" itemprop="description"><?php echo article_description(); ?></p>
+                <a class="c-btn c-btn--primary block" href="<?php echo article_url(); ?>"
+                  title="Read the full article on the blog" itemprop="url mainEntityOfPage">Read article</a>
               </div>
-            </div>
-            <p class="mb-4 flex-1" itemprop="description"><?php echo article_description(); ?></p>
-            <a class="c-btn c-btn--primary block" href="<?php echo article_url(); ?>"
-              title="Read the full article on the blog" itemprop="url mainEntityOfPage">Read article</a>
+            </article>
           </div>
-        </div>
-      </article>
+      <?php $i++; endforeach; ?>
 
-      <?php $i++; ?>
-      <?php endwhile; ?>
-    </div>
     </div>
   </div>
+</div>
 
-  <?php theme_include('footer'); ?>
+<?php theme_include('footer'); ?>

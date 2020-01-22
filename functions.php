@@ -111,17 +111,24 @@ function rwar_latest_posts($limit, $slug) {
 
         // move to next
         $posts->next();
+
     }
     else {
         // back to the start
         $posts->rewind();
-
+        
         // reset original article
         Registry::set('article', Registry::get('original_article'));
-
+        
         // remove items
         Registry::set('rwar_latest_posts', false);
     }
 
-    return $result;
+    return $posts;
+}
+
+function user_real_name($id) {
+    $user = User::find($id)->real_name;
+    print_r($user);
+    return $user;
 }
