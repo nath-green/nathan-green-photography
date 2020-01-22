@@ -12,31 +12,14 @@
     $cssFile = $manifest['main.css'];
   ?>
 
+  <link rel="preload" as="style" href="<?php echo theme_url('/css/' . $cssFile); ?>">
   <link rel="stylesheet" href="<?php echo theme_url('/css/' . $cssFile); ?>">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
   <link rel="shortcut icon" href="<?php echo theme_url('img/favicon.png'); ?>">
-  <link href="https://fonts.googleapis.com/css?family=Adamina|Lora|Roboto&display=swap" rel="stylesheet">
 
   <!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-  <?php if (site_meta('google_analytics_tracking_id')) { ?>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="<?php googleAnalyticsUrl();?>"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', "<?php echo site_meta('google_analytics_tracking_id');?>");
-  </script>
-  <?php } ?>
-
-
-  <script src="<?php echo theme_url('/js/main.js'); ?>"></script>
 
   <meta name="viewport" content="width=device-width">
 
@@ -58,18 +41,12 @@
   <meta property="og:description" content="<?php echo page_description(); ?>">
 </head>
 
-<body class="<?php echo body_class(); ?> font-sans">
+<body class="<?php echo body_class(); ?>">
   <div class="flex flex-col mh-100vh">
-    <header class="py-5 bg-white shadow">
+    <header class="py-5">
       <div class="px-6 flex justify-between items-center">
-        <a href="<?php echo base_url(); ?>" aria-label="Blog home"><img src="<?php echo theme_url('img/logo.svg'); ?>"
+        <a href="<?php echo base_url(); ?>" aria-label="Home"><img src="<?php echo theme_url('img/logo.svg'); ?>"
             class="" width="170px" alt=""></a>
-        <?php if (site_meta('website_url')) { ?>
-        <a href="<?php echo site_meta('website_url'); ?>"
-          class="rounded-full w-8 h-8 bg-purple-200 flex items-center justify-center text-gray-700"
-          aria-label="<?php echo site_name(); ?>">
-          <ion-icon name="ios-home"></ion-icon>
-        </a>
-        <?php } ?>
+            <a class="c-btn" href="<?php echo base_url(); ?>posts" title="Read photography articles written by Nathan Green">Read blog</a>
       </div>
     </header>

@@ -21,6 +21,11 @@ Basic theme for Anchor CMS using Tailwind
 
 ### Prep site for theme installation
 
+- Update `/anchor/config/app.php`
+
+Set `url` to empty string
+Set `index` to empty string
+
 - Create a new function in `/anchor/functions/users.php`
 
 ```
@@ -37,15 +42,19 @@ function user_custom_field($key, $default = '', $id = null) {
 }
 ```
 
-- Create a new function in `/anchor/functions/helpers.php`
+- Create new functions in `/anchor/functions/helpers.php`
 
 ```
 function base_domain_url($append = '') {
-  return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['SERVER_NAME'] . $append;
+    return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['SERVER_NAME'] . $append;
+}
+
+function complete_url() {
+    return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 }
 ```
 
-- Add sitemap generator `Route` in `/anchor/router/sites.php`
+- Add sitemap generator `Route` in `/anchor/routes/site.php`
 
 **This has to be before the `View Pages` function**
 

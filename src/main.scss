@@ -1,6 +1,42 @@
 @tailwind base;
 @tailwind components;
 
+h1 {
+  @apply text-xl leading-tight mb-3 font-semibold font-title;
+}
+
+h2 {
+  @apply text-lg mb-4 font-semibold font-title leading-tight;
+}
+
+h3 {
+  @apply text-md leading-tight mb-3 font-semibold font-title;
+}
+
+p {
+  @apply text-md leading-tight text-gray-700 font-serif;
+}
+
+.c-btn {
+  @apply bg-white text-center py-3 px-4 rounded border font-semibold text-gray-700 uppercase text-sm tracking-widest font-sans;
+}
+
+.c-btn--primary {
+  @apply bg-purple-600 text-white border-0;
+}
+
+.c-pill {
+  @apply bg-gray-200 text-gray-700 rounded py-1 px-3 text-xs uppercase tracking-widest font-sans font-semibold;
+}
+
+.c-card {
+  @apply rounded bg-white shadow overflow-hidden h-full flex flex-col;
+}
+
+.c-box {
+  @apply border px-4 py-6 rounded mb-6 bg-white;
+}
+
 .sm-container {
   width: 100%;
   margin: 0 auto;
@@ -26,7 +62,17 @@
 }
 
 .article-html p {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-html p img {
+  left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
 }
 
 @screen md {
@@ -37,13 +83,28 @@
 }
 
 @screen lg {
-  .lg\:h-30rem {
-    height: 30rem!important;
+  .lg\:h-45rem {
+    height: 45rem!important;
   }
 
   .lg-container {
     max-width: 1024px;
   }
+
+  .article-html p img {
+    left: initial;
+    margin-left: initial;
+    margin-right: initial;
+    max-width: initial;
+    position: initial;
+    right: initial;
+    width: initial;
+  }
+}
+
+.bg-pattern {
+  background-color: #805ad5;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 @tailwind utilities;
