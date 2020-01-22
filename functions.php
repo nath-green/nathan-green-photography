@@ -100,7 +100,6 @@ function rwar_latest_posts($limit, $slug) {
             $posts = Post::where('status', '=', 'published')->where('category', '=', $category->id)->sort('created', 'desc')->take($limit)->get();
         } else {
             $posts = Post::where('status', '=', 'published')->sort('created', 'desc')->take($limit)->get();
-
         }
 
         Registry::set('rwar_latest_posts', $posts = new Items($posts));
