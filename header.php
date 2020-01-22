@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo page_title('Page can’t be found'); ?> - <?php echo site_name(); ?></title>
+  <title><?php echo page_custom_field('meta_title'); ?></title>
 
-  <meta name="description" content="<?php echo site_description(); ?>">
+  <meta name="description" content="<?php echo page_custom_field('meta_description'); ?>">
 
   <?php
     $manifest = json_decode(file_get_contents(__DIR__. '/manifest.json'), true);
@@ -23,7 +23,7 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <meta property="og:title" content="<?php echo page_title(); ?>">
+  <meta property="og:title" content="<?php echo page_custom_field('meta_title'); ?>">
   <?php if(is_article()): ?>
   <meta property="og:type" content="article">
   <?php else: ?>
@@ -38,7 +38,7 @@
   <meta property="og:image" content="<?php echo base_domain_url() . theme_url('img/og_image.jpg'); ?>">
   <?php endif; ?>
   <meta property="og:site_name" content="<?php echo site_name(); ?>">
-  <meta property="og:description" content="<?php echo page_description(); ?>">
+  <meta property="og:description" content="<?php echo page_custom_field('meta_description'); ?>">
 </head>
 
 <body class="<?php echo body_class(); ?>">
