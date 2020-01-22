@@ -3,9 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo page_custom_field('meta_title'); ?></title>
+  <?php if(is_article()): ?>
+    <title><?php echo article_title(); ?> | Nathan Green Photography</title>
+    <meta property="og:title" content="<?php echo article_title(); ?> | Nathan Green Photography">
+    <meta property="og:type" content="article">
+    <meta name="description" content="<?php echo article_description(); ?>">
+    <meta property="og:description" content="<?php echo article_description(); ?>">
+  <?php else: ?>
+    <title><?php echo page_custom_field('meta_title'); ?></title>
+    <meta property="og:title" content="<?php echo page_custom_field('meta_title'); ?>">
+    <meta property="og:type" content="website">
+    <meta name="description" content="<?php echo page_custom_field('meta_description'); ?>">
+    <meta property="og:description" content="<?php echo page_custom_field('meta_description'); ?>">
+  <?php endif; ?>
 
-  <meta name="description" content="<?php echo page_custom_field('meta_description'); ?>">
 
   <?php
     $manifest = json_decode(file_get_contents(__DIR__. '/manifest.json'), true);
@@ -22,23 +33,15 @@
     <![endif]-->
 
   <meta name="viewport" content="width=device-width">
-
-  <meta property="og:title" content="<?php echo page_custom_field('meta_title'); ?>">
-  <?php if(is_article()): ?>
-  <meta property="og:type" content="article">
-  <?php else: ?>
-  <meta property="og:type" content="website">
-  <?php endif; ?>
   <meta property="og:url" content="<?php echo complete_url(); ?>">
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="800" />
-  <?php if(is_article() && !article_custom_field('og:image')): ?>
-  <meta property="og:image" content="<?php echo base_domain_url(article_custom_field('og_image')); ?>">
-  <?php else: ?>
-  <meta property="og:image" content="<?php echo base_domain_url() . theme_url('img/og_image.jpg'); ?>">
-  <?php endif; ?>
   <meta property="og:site_name" content="<?php echo site_name(); ?>">
-  <meta property="og:description" content="<?php echo page_custom_field('meta_description'); ?>">
+  <?php if(is_article() && !article_custom_field('og:image')): ?>
+    <meta property="og:image" content="<?php echo base_domain_url(article_custom_field('og_image')); ?>">
+  <?php else: ?>
+    <meta property="og:image" content="<?php echo base_domain_url() . theme_url('img/og_image.jpg'); ?>">
+  <?php endif; ?>
 </head>
 
 <body class="<?php echo body_class(); ?>">
