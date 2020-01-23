@@ -3,7 +3,7 @@
 
 						    <?php if (site_meta('facebook_url')) { ?>
 						    <div class="mb-2">
-						      <a href="<?php echo site_meta('facebook_url'); ?>" class="flex items-center text-sm">
+						      <a href="<?php echo site_meta('facebook_url'); ?>" class="flex items-center text-sm" title="See Nathan Green Photography Facebook profile">
 									<img src="<?php echo theme_url('img/facebook.svg'); ?>" alt="Facebook logo" width="30px"
             aria-hidden class="mr-2" /> Facebook
 						      </a>
@@ -12,7 +12,7 @@
 
 						    <?php if (site_meta('instagram_url')) { ?>
 						    <div class="mb-2">
-						      <a href="<?php echo site_meta('instagram_url'); ?>" class="flex items-center text-sm">
+						      <a href="<?php echo site_meta('instagram_url'); ?>" class="flex items-center text-sm" title="See Nathan Green Photography Instagram profile">
 									<img src="<?php echo theme_url('img/instagram.svg'); ?>" alt="Instagram logo" width="30px"
             aria-hidden class="mr-2" /> Instagram
 						      </a>

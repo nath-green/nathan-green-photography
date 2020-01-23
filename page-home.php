@@ -154,7 +154,7 @@
 <div class="sm-container mb-6">
   <h2>Latest blog posts</h2>
   <p>Read the most recent photography articles written by Nathan Green. See the full list of articles on the <a
-      href="<?php echo base_url(); ?>posts" class="text-purple-600 underline">blog homepage</a>.</p>
+      href="<?php echo base_url(); ?>posts" class="text-purple-600 underline" title="See all blog articles on the blog homepage">blog homepage</a>.</p>
 </div>
 
 <div class="bg-gray-200 border pt-12 pb-6">
@@ -186,7 +186,7 @@
                       <span itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
                         <span itemprop="name"><?php user_real_name($post->author); ?></span></span> in <a
                         href="<?php echo article_category_url(); ?>"
-                        class="text-purple-600 underline"><?php echo article_category(); ?></a>
+                        class="text-purple-600 underline" title="Read more blog articles in this category"><?php echo article_category(); ?></a>
                     </p>
 
                     <p class="font-sans text-xs">
