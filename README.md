@@ -1,6 +1,6 @@
-# anchor-tailwind
+# Nathan Green Photography
 
-Basic theme for Anchor CMS using Tailwind
+Theme for Anchor CMS using Tailwind.
 
 ## Anchor CMS Installation
 
@@ -79,7 +79,7 @@ Route::get('blog-sitemap.xml', function() { $sitemap = ''; $sitemap .= ' ';
         $sitemap .= '<priority>0.8</priority>';
         $sitemap .= '</url>';
     endwhile;
-    
+
     $query = Post::where('status', '=', 'published')->sort(Base::table('posts.created'), 'desc');
     foreach($query->get() as $article) {
       $sitemap .= '<url>';
@@ -90,19 +90,17 @@ Route::get('blog-sitemap.xml', function() { $sitemap = ''; $sitemap .= ' ';
       $sitemap .= '</url>';
     }
     $sitemap .= '</urlset>';
-    
+
     return Response::create($sitemap, 200, array('content-type' => 'application/xml'));
     });
 ```
 
 - Add site variables to Admin Panel in `Extend -> Site Variables`
 
-`website_url`
-`google_analytics_tracking_id`
-`heading`
-`facebook_url`
-`instagram_url`
-`faq_url`
+  - `blog_description`
+  - `blog_heading`
+  - `facebook_url`
+  - `instagram_url`
 
 - Add custom fields to type `post`
 
@@ -115,13 +113,22 @@ Route::get('blog-sitemap.xml', function() { $sitemap = ''; $sitemap .= ' ';
 | Unique key | `hero`       |
 | Label      | `Hero Image` |
 
+**Hero Image Alt Text**
+
+| Key        | Value                 |
+| ---------- | --------------------- |
+| Type       | `post`                |
+| Field      | `text`                |
+| Unique key | `image_alt`           |
+| Label      | `Hero Image Alt Text` |
+
 **OG Image**
 
-| Key        | Value        |
-| ---------- | ------------ |
-| Type       | `post`       |
-| Field      | `image`      |
-| Unique key | `og_image`       |
+| Key        | Value      |
+| ---------- | ---------- |
+| Type       | `post`     |
+| Field      | `image`    |
+| Unique key | `og_image` |
 | Label      | `OG Image` |
 
 - Add custom fields to type `user`
@@ -134,6 +141,26 @@ Route::get('blog-sitemap.xml', function() { $sitemap = ''; $sitemap .= ' ';
 | Field      | `image`  |
 | Unique key | `avatar` |
 | Label      | `Avatar` |
+
+- Add custom fields to type `page`
+
+**Meta Description**
+
+| Key        | Value              |
+| ---------- | ------------------ |
+| Type       | `page`             |
+| Field      | `text`             |
+| Unique key | `meta_description` |
+| Label      | `Meta Description` |
+
+**Meta Title**
+
+| Key        | Value        |
+| ---------- | ------------ |
+| Type       | `page`       |
+| Field      | `text`       |
+| Unique key | `meta_title` |
+| Label      | `Meta Title` |
 
 ### Theme generation and installation
 
