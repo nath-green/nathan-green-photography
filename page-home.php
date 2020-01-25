@@ -163,8 +163,9 @@
 
       <?php
         $i = 1;
-        $posts = rwar_latest_posts(4, false);
-        foreach($posts as $post): ?>
+        while(rwar_latest_posts(4, false)):
+        
+        ?>
           <div class="md:w-1/2 md:px-3 mb-6" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <meta itemprop="url" content="<?php echo article_url(); ?>" />
             <meta itemprop="position" content="<?php echo $i; ?>" />
@@ -177,14 +178,14 @@
                 </header>
                 <div class="flex items-center mb-3">
                   <span class="w-10 h-10 rounded-full mr-2">
-                    <img src="<?php echo user_custom_field('avatar', '', $post->author); ?>"
-                      alt="<?php user_real_name($post->author); ?>" class="w-full h-full object-cover rounded-full">
+                    <img src="<?php echo user_custom_field('avatar', '', '1'); ?>"
+                      alt="Nathan Green" class="w-full h-full object-cover rounded-full">
                   </span>
 
                   <div>
                     <p class="font-sans text-sm">
                       <span itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
-                        <span itemprop="name"><?php user_real_name($post->author); ?></span></span> in <a
+                        <span itemprop="name">Nathan Green</span></span> in <a
                         href="<?php echo article_category_url(); ?>"
                         class="text-purple-600 underline" title="Read more blog articles in this category"><?php echo article_category(); ?></a>
                     </p>
@@ -202,7 +203,7 @@
               </div>
             </article>
           </div>
-      <?php $i++; endforeach; ?>
+      <?php $i++; endwhile; ?>
 
     </div>
   </div>

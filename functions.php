@@ -124,7 +124,7 @@ function rwar_latest_posts($limit, $slug) {
         Registry::set('rwar_latest_posts', false);
     }
 
-    return $posts;
+    return $result;
 }
 
 function user_real_name($id) {
