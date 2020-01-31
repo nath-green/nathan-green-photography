@@ -58,6 +58,16 @@
   <?php else: ?>
     <meta property="og:image" content="<?php echo base_domain_url() . theme_url('img/og_image.jpg'); ?>">
   <?php endif; ?>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155298698-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155298698-1');
+  </script>
 </head>
 
 <body class="<?php echo body_class(); ?>">
