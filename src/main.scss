@@ -2,19 +2,19 @@
 @tailwind components;
 
 h1 {
-  @apply text-xl leading-tight mb-3 font-semibold font-title;
+  @apply text-2xl leading-tight mb-3 font-semibold font-title text-gray-700;
 }
 
 h2 {
-  @apply text-lg mb-4 font-semibold font-title leading-tight;
+  @apply text-xl mb-4 font-semibold font-title leading-tight text-gray-700;
 }
 
 h3 {
-  @apply text-md leading-tight mb-3 font-semibold font-title;
+  @apply text-lg leading-tight mb-3 font-semibold font-title text-gray-700;
 }
 
 p {
-  @apply text-md leading-tight text-gray-700 font-serif;
+  @apply text-md leading-snug text-gray-700 font-serif;
 }
 
 .c-btn {
@@ -76,6 +76,14 @@ p {
 }
 
 @screen md {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
   .sm-container {
     max-width: 600px;
     padding: 0;
