@@ -1,23 +1,25 @@
 <?php theme_include('header'); ?>
 
 <div class="lg-container px-0 mb-10 lg:mt-10">
-  <img class="object-cover w-full" src="<?php echo theme_url('img/louis-02-lg.jpg'); ?>"
-    alt="Nathan Green holding son Samuel" />
+  <img class="object-cover w-full" src="<?php echo theme_url('img/louis-02-lg.jpg'); ?>" alt="Baby boy smiling held by Dad" />
 </div>
 
-<div class="sm-container">
+<div class="sm-container mb-12">
   <h1>In home baby photoshoots</h1>
   <p class="mb-3">Every baby is different and this makes for such a range of photographic opportunities. Whether your baby enjoys tummy time, reading a book or standing in their cot - it can all be captured beautifully. As the weeks pass by, a true personality starts to emerge with their likes and dislikes.</p>
-  <p class="mb-10">The best thing about a baby shoot is they lead the way, I would never force a baby to sit in a certain position or play with a toy just for a photo. I let them (and you) take the lead with what they enjoy doing the most. Infectious giggles from Dad singing Humpty Dumpty? Don&apos;t let me get in the way, I&apos;ll be in the background as much as possible.</p>
-
-  <h2>What age should my baby be?</h2>
-  <p class="mb-3">The best thing is there is no age which is best for photography. Every stage of a babies life is special and different, often just days between learning something new!</p>
-  <p class="mb-10">very stage and development can and should be remembered, although some are definitely easier to photograph than others!</p>
+  <p>The best thing about a baby shoot is they lead the way, I would never force a baby to sit in a certain position or play with a toy just for a photo. I let them (and you) take the lead with what they enjoy doing the most. Infectious giggles from Dad singing Humpty Dumpty? Don&apos;t let me get in the way, I&apos;ll be in the background as much as possible.</p>
 </div>
 
-<div class="lg-container px-0 mb-10">
-  <img class="object-cover w-full" src="<?php echo theme_url('img/jamie-02-lg.jpg'); ?>"
-    alt="Nathan Green holding son Samuel" />
+<div class="lg-container px-0 mb-12">
+  <img class="object-cover w-full" src="<?php echo theme_url('img/jamie-02-lg.jpg'); ?>" alt="Baby boy being read to by Mum" />
+</div>
+
+<div class="sm-container mb-12">
+  <h2>What age should my baby be?</h2>
+  <p class="mb-3">The best thing is there is no age which is best for photography. Every stage of a babies life is special and different, often just days between learning something new!</p>
+  <p class="mb-6">Every stage and development can and should be remembered, although some are definitely easier to photograph than others!</p>
+
+  <a class="c-btn c-btn--primary inline-block mb-12" href="http://m.me/nathangreenphotography" title="Get in contact with Nathan Green">Ready to enquire?</a>
 </div>
 
 <div class="sm-container mb-6">
