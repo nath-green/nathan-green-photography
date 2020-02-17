@@ -164,7 +164,7 @@
   <div class="c-box">
     <h3>What is the best age for a photoshoot?</h3>
     <p class="mb-3">Every baby age and milestone is special in their own way. The photography style slightly changes with different ages but each stage is memorable.</p>
-    <p>New parents worry about capturing the very early stages of a newborn, which is typically within the first 2 weeks - but sometimes that isn&apos;t doable. Newborns are still cute and squishy for a long time. See the photos from a <a href="" class="text-purple-600 underline">photoshoot of a 7 week old</a>.</p>
+    <p>New parents worry about capturing the very early stages of a newborn, which is typically within the first 2 weeks - but sometimes that isn&apos;t doable. Newborns are still cute and squishy for a long time.</p>
   </div>
 </div>
 
