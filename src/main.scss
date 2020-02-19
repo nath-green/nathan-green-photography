@@ -75,11 +75,7 @@ p {
   width: 100vw;
 }
 
-.article-html figure {
-  @apply mb-6;
-}
-
-.article-html figure img {
+.article-html div img {
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -87,10 +83,6 @@ p {
   position: relative;
   right: 50%;
   width: 100vw;
-}
-
-.article-html figcaption {
-  @apply text-xs leading-snug text-gray-700 font-serif;
 }
 
 .article-html ul {
