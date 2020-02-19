@@ -75,11 +75,27 @@ p {
   width: 100vw;
 }
 
-.article-html ul {
-  @apply text-md leading-snug text-gray-700 font-serif;
+.article-html figure {
+  @apply mb-6;
+}
 
-  margin-bottom: 1.5rem;
-  margin-left: 1.5rem;
+.article-html figure img {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+.article-html figcaption {
+  @apply text-xs leading-snug text-gray-700 font-serif;
+}
+
+.article-html ul {
+  @apply text-md leading-snug text-gray-700 font-serif mb-6 ml-6;
+
   list-style-type: disc;
 }
 
