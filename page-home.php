@@ -5,7 +5,7 @@
 </div>
 
 <div class="sm-container mb-16">
-  <h1 class="mb-2">Natural in home newborn and baby photography in Leeds</h1>
+  <h1 class="mb-2">Natural in-home newborn and baby photography in Leeds</h1>
   <p class="mb-12">A relaxed home photoshoot with simple all inclusive pricing.</p>
 
   <div class="flex flex-col md:flex-row">
@@ -14,8 +14,8 @@
     </div>
     <div>
       <p class="mb-3">Hi! 👋 I'm Nathan, a newborn and baby photographer based in Leeds, Yorkshire. </p>
-      <p class="mb-8">An in home photoshoot captures the real life. Those transient moments, everyday details and the connection with your baby and family home.</p>
-      <!-- <p class="mb-8">Read more about <a class="text-purple-600 underline">the differences between lifestyle and studio photoshoots</a> and what to expect from our time together.</p> -->
+      <p class="mb-3">A lifestyle in-home photoshoot captures the real life. Those transient moments, everyday details and the connection with your baby and family home.</p>
+      <p class="mb-8">Read more about <a href="/posts/what-is-in-home-lifestyle-photography" class="text-purple-600 underline" title="What is in-home lifestyle photography?">what a lifestyle in-home photoshoot is</a> and how it is different to a studio shoot.</p>
 
       <a href="#portfolio" class="c-btn c-btn--primary inline-block mr-1" title="Jump to portfolio section">See portfolio</a>
       <a href="#pricing" class="c-btn inline-block border-purple-600 text-purple-600" title="Jump to pricing section">Pricing &amp; info</a>
@@ -164,7 +164,7 @@
   <div class="c-box">
     <h3>What is the best age for a photoshoot?</h3>
     <p class="mb-3">Every baby age and milestone is special in their own way. The photography style slightly changes with different ages but each stage is memorable.</p>
-    <p>New parents worry about capturing the very early stages of a newborn, which is typically within the first 2 weeks - but sometimes that isn&apos;t doable. Newborns are still cute and squishy for a long time.</p>
+    <p>New parents worry about capturing the very early stages of a newborn, which is typically within the first 2 weeks - but sometimes that isn&apos;t doable. Newborns are still cute and squishy for some time after that.</p>
   </div>
 </div>
 
