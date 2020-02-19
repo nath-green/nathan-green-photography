@@ -62,7 +62,7 @@ p {
 }
 
 .article-html p {
-  margin-bottom: 1.5rem;
+  @apply mb-3;
 }
 
 .article-html p img {
@@ -86,7 +86,7 @@ p {
 }
 
 .article-html ul {
-  @apply text-md leading-snug text-gray-700 font-serif mb-6 ml-6;
+  @apply text-md leading-snug text-gray-700 font-serif mb-3 ml-6;
 
   list-style-type: disc;
 }
