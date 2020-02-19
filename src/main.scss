@@ -103,6 +103,10 @@ p {
   @apply mb-1;
 }
 
+.article-html .border p {
+  @apply mb-0;
+}
+
 @screen md {
   h1 {
     @apply text-3xl;
