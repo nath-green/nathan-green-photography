@@ -2,7 +2,7 @@
 @tailwind components;
 
 h1 {
-  @apply text-2xl leading-tight mb-3 font-semibold font-title text-gray-700;
+  @apply text-2xl leading-tight mb-4 font-semibold font-title text-gray-700;
 }
 
 h2 {
@@ -10,7 +10,7 @@ h2 {
 }
 
 h3 {
-  @apply text-lg leading-tight mb-3 font-semibold font-title text-gray-700;
+  @apply text-lg leading-tight mb-4 font-semibold font-title text-gray-700;
 }
 
 p {
