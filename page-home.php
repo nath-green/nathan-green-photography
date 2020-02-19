@@ -31,8 +31,8 @@
 
         <p class="mb-3">No posing, no direction, no outfit changes. Just you, your family and your baby exactly how you are.</p>
         <p class="mb-3">The only important thing is that you can be yourselves. And this, in my opinion, makes for the most genuine style of photography - natural and honest.</p>
-        <p>A studio can be daunting, not just for the parents but for the baby too. Surely you can&apos;t have a more natural environment than your own home, right?</p>
-        <!-- <a class="c-btn inline-block border-purple-600 text-purple-600 bg-gray-100" href="https://www.facebook.com/pg/nathangreenphotography/reviews/" title="Read Facebook reviews on Facebook.com">What to expect</a> -->
+        <p class="mb-3">A studio can be daunting, not just for the parents but for the baby too. Surely you can&apos;t have a more natural environment than your own home, right?</p>
+        <p>Read the <a href="/posts/5-reasons-to-have-an-in-home-photoshoot" class="text-purple-600 underline">5 reasons to have an in-home photoshoot</a> with your newborn or baby.</p>
       </div>
     </div>
 
