@@ -83,6 +83,10 @@ p {
   list-style-type: disc;
 }
 
+.article-html li {
+  @apply mb-1;
+}
+
 @screen md {
   h1 {
     @apply text-3xl;
