@@ -19,7 +19,7 @@
   <p class="mb-3">The best thing is there is no age which is best for photography. Every stage of a babies life is special and different, often just days between learning something new!</p>
   <p class="mb-6">Every stage and development can and should be remembered, although some are definitely easier to photograph than others!</p>
 
-  <a class="c-btn c-btn--primary inline-block mb-12" href="http://m.me/nathangreenphotography" title="Get in contact with Nathan Green">Ready to enquire?</a>
+  <a class="c-btn c-btn--primary inline-block mb-12" href="<?php echo base_url();?>contact" title="Get in contact with Nathan Green">Ready to enquire?</a>
 </div>
 
 <div class="sm-container mb-6">

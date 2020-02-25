@@ -52,7 +52,7 @@
   <p class="mb-3">When you book you get the photoshoot session, which is normally a couple of hours and all your edited photos (usually between 20 and 40) in an online gallery to share, download, view and do as you please - they are yours to keep.</p>
   <p class="mb-12">If you do want some photos printing, I can help with that. But feel free to print them off for yourself, there are no obligations.</p>
 
-  <a class="c-btn c-btn--primary inline-block" href="http://m.me/nathangreenphotography" title="Get in contact with Nathan Green">Ready to enquire?</a>
+  <a class="c-btn c-btn--primary inline-block" href="<?php echo base_url();?>contact" title="Get in contact with Nathan Green">Ready to enquire?</a>
 </div>
 
 <div class="bg-gray-100 border py-16 mb-16" id="portfolio">
@@ -169,7 +169,7 @@
 </div>
 
 <div class="sm-container mb-6">
-  <a class="c-btn c-btn--primary inline-block mb-12" href="http://m.me/nathangreenphotography" title="Get in contact with Nathan Green">Ready to enquire?</a>
+  <a class="c-btn c-btn--primary inline-block mb-12" href="<?php echo base_url();?>contact" title="Get in contact with Nathan Green">Ready to enquire?</a>
   <h2>Latest blog posts</h2>
   <p>Read the most recent photography articles written by Nathan Green. See the full list of articles on the <a href="<?php echo base_url(); ?>posts" class="text-purple-600 underline" title="See all blog articles on the blog homepage">blog homepage</a>.</p>
 </div>

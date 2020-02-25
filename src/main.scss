@@ -37,6 +37,28 @@ p {
   @apply border px-4 py-6 rounded mb-6 bg-white;
 }
 
+input {
+  @apply block border rounded py-2 px-3 text-gray-700 outline-none font-serif w-full;
+}
+
+input:focus, textarea:focus {
+  @apply border-purple-600;
+}
+
+textarea {
+  @apply block border rounded py-2 px-3 text-gray-700 outline-none font-serif w-full;
+
+  resize: none;
+}
+
+label {
+  @apply text-gray-700 mb-1 block font-serif;
+}
+
+.notifications .error {
+  @apply text-red-600;
+}
+
 .sm-container {
   width: 100%;
   margin: 0 auto;

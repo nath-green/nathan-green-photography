@@ -21,7 +21,7 @@
 <div class="sm-container mb-12">
   <h2>When should I book?</h2>
   <p class="mb-6">Already given birth or have a baby on the way? With newborn babies, unfortunately they don't keep their little-ness for very long. It is a good idea to contact me as soon as you know you want to photograph your baby so I can reserve a date around your due date and capture all their cuteness why they are still a newborn.</p>
-  <a class="c-btn c-btn--primary inline-block mb-12" href="http://m.me/nathangreenphotography" title="Get in contact with Nathan Green">Ready to enquire?</a>
+  <a class="c-btn c-btn--primary inline-block mb-12" href="<?php echo base_url();?>contact" title="Get in contact with Nathan Green">Ready to enquire?</a>
 </div>
 
 <div class="sm-container mb-6">

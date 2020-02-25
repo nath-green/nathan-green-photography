@@ -21,7 +21,7 @@
   <p class="mb-3">There is no greater feeling than seeing your work shared, loved and printed. And hopefully, my photos will soon be on your walls.</p>
     <p class="mb-6">Capturing those true special moments is about having somebody you can trust. When you book a photoshoot, my job is to make you feel relaxed and comfortable, but more importantly capture the heart of your family through your baby. It all starts with a cup of tea&hellip;</p>
 
-  <a class="c-btn c-btn--primary inline-block mb-12" href="http://m.me/nathangreenphotography" title="Get in contact with Nathan Green">Ready to enquire?</a>
+  <a class="c-btn c-btn--primary inline-block mb-12" href="<?php echo base_url();?>contact" title="Get in contact with Nathan Green">Ready to enquire?</a>
 
   <h2>Reviews and comments</h2>
   <p class="mb-6">Don&apos;t take my word for it. This is what people really think.</p>
