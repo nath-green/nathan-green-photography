@@ -1,3 +1,4 @@
+					<?php if (page_slug() != 'linktree') { ?>
 						<footer class="py-8 bg-gray-700 shadow text-white">
 						  <div class="lg-container">
 
@@ -25,6 +26,7 @@
 						    <p class="text-xs text-white font-sans">&copy; <?php echo date('Y'); ?> <?php echo site_name(); ?>. All rights reserved.</p>
 						  </div>
 						</footer>
+					<?php } ?>
 						</div>
 
 						<script>

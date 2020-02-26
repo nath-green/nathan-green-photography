@@ -89,14 +89,17 @@
 </head>
 
 <body class="<?php echo body_class(); ?>">
+
   <div class="flex flex-col mh-100vh">
-    <div class="w-full bg-purple-600 px-6 py-3 text-white flex justify-between text-sm">
-      <span>WIN a FREE in-home photoshoot</span>
-      <a href="https://www.facebook.com/nathangreenphotography/posts/176310713821121" class="underline">Enter now</a>
-    </div>
-    <header class="py-5">
-      <div class="px-6 flex justify-between items-center">
-        <a href="<?php echo base_url(); ?>" aria-label="Home"><img src="<?php echo theme_url('img/ng-logo-heart.svg'); ?>" class="" width="170px" alt="Nathan Green Photography logo" title="Go back to the home page"></a>
-        <a class="c-btn inline-block border-purple-600 text-purple-600" href="<?php echo base_url(); ?>#pricing" title="Pricing details for an in home photoshoot">Pricing</a>
+    <?php if (page_slug() != 'linktree') { ?>
+      <div class="w-full bg-purple-600 px-6 py-3 text-white flex justify-between text-sm">
+        <span>WIN a FREE in-home photoshoot</span>
+        <a href="https://www.facebook.com/nathangreenphotography/posts/176310713821121" class="underline">Enter now</a>
       </div>
-    </header>
+      <header class="py-5">
+        <div class="px-6 flex justify-between items-center">
+          <a href="<?php echo base_url(); ?>" aria-label="Home"><img src="<?php echo theme_url('img/ng-logo-heart.svg'); ?>" class="" width="170px" alt="Nathan Green Photography logo" title="Go back to the home page"></a>
+          <a class="c-btn inline-block border-purple-600 text-purple-600" href="<?php echo base_url(); ?>#pricing" title="Pricing details for an in home photoshoot">Pricing</a>
+        </div>
+      </header>
+    <?php } ?>
