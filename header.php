@@ -92,10 +92,6 @@
 
   <div class="flex flex-col mh-100vh">
     <?php if (page_slug() != 'linktree') { ?>
-      <div class="w-full bg-purple-600 px-6 py-3 text-white flex justify-between text-sm">
-        <span>WIN a FREE in-home photoshoot</span>
-        <a href="https://www.facebook.com/nathangreenphotography/posts/176310713821121" class="underline">Enter now</a>
-      </div>
       <header class="py-5">
         <div class="px-6 flex justify-between items-center">
           <a href="<?php echo base_url(); ?>" aria-label="Home"><img src="<?php echo theme_url('img/ng-logo-heart.svg'); ?>" class="" width="170px" alt="Nathan Green Photography logo" title="Go back to the home page"></a>

@@ -9,8 +9,6 @@
 
   <a href="https://www.facebook.com/nathangreenphotography" class="c-btn inline-block w-full mb-3 border-purple-600 text-purple-600">Facebook page</a>
 
-  <a href="https://www.facebook.com/nathangreenphotography/posts/176310713821121" class="c-btn inline-block w-full mb-10 border-purple-600 text-purple-600">WIN a FREE photoshoot</a>
-
   <h3>Latest blog posts</h3>
 
   <a href="https://www.nathgreen.co.uk/posts/5-reasons-to-have-an-in-home-photoshoot" class="c-btn inline-block w-full mb-3 border-purple-600 text-purple-600">5 reasons to have an in-home photoshoot</a>
